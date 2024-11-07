@@ -1,6 +1,5 @@
 // import { useAuthStore } from "@/lib/auth-store";
 import { LoginForm } from "@/components/auth/login-form";
-import { Header } from "@/components/layout/header";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Toaster } from "@/components/ui/toaster";
 import { LandingPageComponent } from "./components/landing-page";
@@ -11,7 +10,6 @@ function App() {
 
   return (
     <div className="min-h-screen">
-      <Header />
       <main className="container mx-auto px-4 py-8">
         <Router>
           <Routes>
