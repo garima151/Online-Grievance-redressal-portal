@@ -1,23 +1,23 @@
-import { Button } from '@/components/ui/button';
-import { useAuthStore } from '@/lib/auth-store';
+import { Button } from "@/components/ui/button";
+import { useAuthStore } from "@/lib/auth-store";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { LogOut, User } from 'lucide-react';
+} from "@/components/ui/dropdown-menu";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { LogOut, User } from "lucide-react";
 
 export function Header() {
   const { user, logout } = useAuthStore();
 
   return (
-    <header className="border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
-      <div className="container flex h-14 max-w-screen-2xl items-center">
+    <header className="border-b fixed top-0 w-full bg-white/80 backdrop-blur-md supports-[backdrop-filter]:bg-white/60">
+      <div className="container flex h-14 max-w-screen-xl mx-auto items-center">
         <div className="mr-4 flex">
           <a className="mr-6 flex items-center space-x-2" href="/">
-            <span className="font-bold text-rose-600">GrievancePortal</span>
+            <span className="font-bold text-primary">GrievancePortal</span>
           </a>
         </div>
         <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">
@@ -47,10 +47,10 @@ export function Header() {
             </DropdownMenu>
           ) : (
             <div className="flex items-center space-x-2">
-              <Button variant="ghost" className="text-rose-600">
+              <Button variant="ghost" className="text-primary">
                 Login
               </Button>
-              <Button className="bg-rose-600 hover:bg-rose-700">Sign up</Button>
+              <Button className="bg-primary hover:bg-rose-700">Sign up</Button>
             </div>
           )}
         </div>
